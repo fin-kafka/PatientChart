@@ -24,7 +24,7 @@ React, Typescript, chroma.js, tailwind css, lodash
 
 It will be great if there are some features in addition:
 
-- Add search filter feature so that the user can get information he wants
+- Add search filter feature so that the user can get detailed information he wants
 
 ## How to start
 
