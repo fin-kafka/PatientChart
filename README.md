@@ -30,3 +30,5 @@ It will be great if there are some features in addition:
 
 `npm start`
 You can start this Project using this command.
+
+**_You need to install `CORS Unblock` Chrome extension to test all the features_**
