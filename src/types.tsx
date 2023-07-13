@@ -20,6 +20,26 @@ export interface Patient {
   total_protein_unit: string
 }
 
+export interface dataRange {
+  min: number
+  max: number
+}
+
+export interface segmentContext {
+  p0: {
+    skip: boolean
+    parsed: Point
+  }
+  p1: {
+    skip: boolean
+    parsed: Point
+  }
+}
+
+export interface pointContext {
+  parsed: Point
+}
+
 export interface Point {
   x: Date
   y: number
@@ -27,8 +47,17 @@ export interface Point {
 
 export interface Dataset {
   label: string
-  data: any[] | undefined
+  data: Patient[]
   parsing: { yAxisKey: string; xAxisKey: string }
   borderColor: string
   spanGaps: boolean
+  segment: {
+    borderColor: (ctx: segmentContext) => string | number | number[] | undefined
+    borderDash: (ctx: segmentContext) => string | number | number[] | undefined
+  }
+  pointBorderWidth: number
+  pointRadius: (ctx: pointContext) => number
+  pointStyle: (ctx: pointContext) => string
+  backgroundColor: string
+  pointBackgroundColor: (ctx: pointContext) => string
 }
