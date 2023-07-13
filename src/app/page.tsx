@@ -163,8 +163,6 @@ export default function Home() {
         },
       },
     })
-    console.log(colorPalette)
-    console.log(tmp.data)
     //@ts-ignore
     setChart(tmp)
     // eslint-disable-next-line react-hooks/exhaustive-deps
